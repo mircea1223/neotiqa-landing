@@ -533,7 +533,7 @@ export default function CaseStudiesPage() {
               <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h4>
               <div className="space-y-1 sm:space-y-2 text-background/80 text-sm">
                 <p>hello@neotiqa.com</p>
-                <p>(555) 123-4567</p>
+                <p>+447366393491</p>
                 <div className="flex gap-3 sm:gap-4 mt-3 sm:mt-4">
                   <div className="w-7 h-7 sm:w-8 sm:h-8 bg-background/20 rounded-full"></div>
                   <div className="w-7 h-7 sm:w-8 sm:h-8 bg-background/20 rounded-full"></div>

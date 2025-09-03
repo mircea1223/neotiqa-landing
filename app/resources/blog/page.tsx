@@ -338,7 +338,7 @@ export default function BlogPage() {
               <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h4>
               <div className="space-y-1 sm:space-y-2 text-background/80 text-sm">
                 <p>hello@neotiqa.com</p>
-                <p>(555) 123-4567</p>
+                <p>+447366393491</p>
               </div>
             </div>
           </div>
