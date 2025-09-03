@@ -92,8 +92,8 @@ export default function ContactPage() {
                 <p className="text-muted-foreground mb-4 text-sm sm:text-base">
                   Book a free consultation at your convenience
                 </p>
-                <Button className="glass-button-primary text-primary-foreground px-4 py-2 text-sm">
-                  Book Now
+                <Button className="glass-button-primary text-primary-foreground px-4 py-2 text-sm" asChild>
+                  <a href="/quiz">Book Now</a>
                 </Button>
               </CardContent>
             </Card>

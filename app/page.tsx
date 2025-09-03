@@ -46,17 +46,23 @@ export default function HomePage() {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg tech-glow w-full sm:w-auto min-h-[48px] relative overflow-hidden group"
+                asChild
               >
-                <span className="relative z-10 text-base">Get Free Audit</span>
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <a href="/quiz">
+                  <span className="relative z-10 text-base">Get Free Audit</span>
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="px-6 sm:px-8 py-3 sm:py-4 text-base glass-card border-primary/30 bg-transparent hover:bg-primary/5 w-full sm:w-auto min-h-[48px] sm:text-base"
+                asChild
               >
-                See How It Works
+                <a href="/case-studies">
+                  See How It Works
+                </a>
               </Button>
             </div>
 
@@ -155,10 +161,13 @@ export default function HomePage() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] tech-glow group relative overflow-hidden"
+              asChild
             >
-              <span className="relative z-10">Get Free Audit</span>
-              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <a href="/quiz">
+                <span className="relative z-10">Get Free Audit</span>
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </a>
             </Button>
           </div>
         </div>
@@ -266,10 +275,13 @@ export default function HomePage() {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg tech-glow group relative overflow-hidden"
+                asChild
               >
-                <span className="relative z-10 text-base">Start Your Free Audit</span>
-                <ArrowRight className="ml-2 h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <a href="/quiz">
+                  <span className="relative z-10 text-base">Start Your Free Audit</span>
+                  <ArrowRight className="ml-2 h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </a>
               </Button>
             </div>
           </div>
@@ -613,10 +625,13 @@ export default function HomePage() {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-12 py-3 sm:py-4 text-lg sm:text-xl min-h-[48px] tech-glow group relative overflow-hidden"
+            asChild
           >
-            <span className="relative z-10">Get Free Audit</span>
-            <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 relative z-10 group-hover:translate-x-1 transition-transform" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity text-base"></div>
+            <a href="/quiz">
+              <span className="relative z-10">Get Free Audit</span>
+              <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 relative z-10 group-hover:translate-x-1 transition-transform" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity text-base"></div>
+            </a>
           </Button>
           <p className="text-xs sm:text-sm text-muted-foreground mt-3 sm:mt-4">
             Join 200+ companies already saving millions with AI automation.

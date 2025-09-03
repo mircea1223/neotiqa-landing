@@ -484,10 +484,13 @@ export default function CaseStudiesPage() {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-12 py-3 sm:py-4 text-lg sm:text-xl min-h-[48px] tech-glow group relative overflow-hidden"
+            asChild
           >
-            <span className="relative z-10">Get Free Audit</span>
-            <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 relative z-10 group-hover:translate-x-1 transition-transform" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <a href="/quiz">
+              <span className="relative z-10">Get Free Audit</span>
+              <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 relative z-10 group-hover:translate-x-1 transition-transform" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
           </Button>
           <p className="text-xs sm:text-sm text-muted-foreground mt-3 sm:mt-4">
             Free consultation • No commitment required • Results guaranteed

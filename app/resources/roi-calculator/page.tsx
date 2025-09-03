@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -137,6 +139,7 @@ export default function ROICalculatorPage() {
                   
                   <Button 
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground tech-glow group relative overflow-hidden"
+                    onClick={() => alert('ROI calculation functionality would be implemented here! This would update the results panel with real calculations based on your inputs.')}
                   >
                     <span className="relative z-10">Calculate ROI</span>
                     <Calculator className="ml-2 h-4 w-4 relative z-10" />
@@ -309,9 +312,12 @@ export default function ROICalculatorPage() {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-12 py-3 sm:py-4 text-lg sm:text-xl tech-glow group relative overflow-hidden"
+            asChild
           >
-            <span className="relative z-10">Schedule Free Consultation</span>
-            <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 relative z-10 group-hover:translate-x-1 transition-transform" />
+            <a href="/contact">
+              <span className="relative z-10">Schedule Free Consultation</span>
+              <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 relative z-10 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
           <p className="text-xs sm:text-sm text-muted-foreground mt-3 sm:mt-4">
             No obligation • Expert guidance • Custom roadmap included

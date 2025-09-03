@@ -43,9 +43,12 @@ export default function HealthcarePage() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg tech-glow group relative overflow-hidden"
+              asChild
             >
-              <span className="relative z-10">Get Healthcare Audit</span>
-              <ArrowRight className="ml-2 h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+              <a href="/quiz">
+                <span className="relative z-10">Get Healthcare Audit</span>
+                <ArrowRight className="ml-2 h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </div>
         </div>

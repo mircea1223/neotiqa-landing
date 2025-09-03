@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -69,9 +71,11 @@ export default function BlogPage() {
                   <span>12 min read</span>
                 </div>
               </div>
-              <Button className="glass-button-primary text-primary-foreground">
-                Read Full Article
-                <ArrowRight className="ml-2 h-4 w-4" />
+              <Button className="glass-button-primary text-primary-foreground" asChild>
+                <a href="/resources/blog/roi-guide-2025">
+                  Read Full Article
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
             </CardContent>
           </Card>
@@ -282,16 +286,17 @@ export default function BlogPage() {
           <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
             Get the latest automation insights delivered to your inbox weekly.
           </p>
-          <div className="max-w-md mx-auto flex gap-3">
+          <form className="max-w-md mx-auto flex gap-3" onSubmit={(e) => { e.preventDefault(); alert('Newsletter signup functionality would be implemented here!'); }}>
             <input 
               type="email" 
               placeholder="Enter your email" 
               className="flex-1 px-4 py-2 rounded-lg glass-card border-border/40 bg-background/50 text-foreground placeholder:text-muted-foreground"
+              required
             />
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6">
+            <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6">
               Subscribe
             </Button>
-          </div>
+          </form>
           <p className="text-xs text-muted-foreground mt-3">
             No spam. Unsubscribe at any time.
           </p>
