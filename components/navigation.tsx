@@ -64,9 +64,21 @@ export function Navigation() {
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 glass-card border-border/40">
-                <DropdownMenuItem>Healthcare</DropdownMenuItem>
-                <DropdownMenuItem>Financial Services</DropdownMenuItem>
-                <DropdownMenuItem>E-commerce</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/industries/healthcare" className="w-full">
+                    Healthcare
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/industries/financial-services" className="w-full">
+                    Financial Services
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/industries/ecommerce" className="w-full">
+                    E-commerce
+                  </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem>SaaS</DropdownMenuItem>
                 <DropdownMenuItem>Manufacturing</DropdownMenuItem>
                 <DropdownMenuItem>Real Estate</DropdownMenuItem>
@@ -87,10 +99,18 @@ export function Navigation() {
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 glass-card border-border/40">
-                <DropdownMenuItem>Blog</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/resources/blog" className="w-full">
+                    Blog
+                  </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem>Guides</DropdownMenuItem>
                 <DropdownMenuItem>Webinars</DropdownMenuItem>
-                <DropdownMenuItem>ROI Calculator</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/resources/roi-calculator" className="w-full">
+                    ROI Calculator
+                  </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem>Documentation</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
