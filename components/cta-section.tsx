@@ -57,11 +57,6 @@ export function CTASection() {
                       placeholder="Phone Number"
                       type="tel"
                     />
-                    <Textarea
-                      className="dark:text-input-dark dark:placeholder-input-dark light:text-input-light light:placeholder-input-light text-xs"
-                      placeholder="Tell us about your business and how you'd like to use AI visualization"
-                      rows={4}
-                    />
                     <Button className="w-full bg-primary hover:bg-primary/90">Book a Demo</Button>
                   </form>
                 </div>

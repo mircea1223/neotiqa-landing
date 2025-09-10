@@ -21,22 +21,29 @@ export function HowItWorks() {
     {
       icon: Zap,
       title: "See the house extension from multiple angles",
-      description: "AI creates photorealistic visualizations showing the completed extension",
+      description: "AI creates photorealistic visualisations showing the completed extension",
     },
   ]
 
   return (
     <>
       <div className="w-full h-px bg-divider"></div>
-      <section id="how-it-works" className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-section">
+      <section
+        id="how-it-works"
+        className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-section"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-0 mt-0">
-          <div ref={headerFade.ref} style={headerFade.fadeInStyle} className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <div
+            ref={headerFade.ref}
+            style={headerFade.fadeInStyle}
+            className="text-center mb-8 sm:mb-12 lg:mb-16"
+          >
             <h2 className="font-bold text-balance mb-2 sm:mb-4 text-sidebar-ring sm:text-2xl lg:text-3xl xl:text-4xl text-2xl">
               How it works
             </h2>
             <p className="max-w-2xl mx-auto text-pretty sm:text-sm lg:text-base text-foreground px-4 sm:px-0 text-xs font-light">
-              Our platform transforms a simple photo of a client's home into a sales-closing visualization — as you
-              blink.
+              Our platform transforms a simple photo of a client's home into a
+              sales-closing visualisation as you blink.
             </p>
           </div>
 
@@ -71,5 +78,5 @@ export function HowItWorks() {
         </div>
       </section>
     </>
-  )
+  );
 }

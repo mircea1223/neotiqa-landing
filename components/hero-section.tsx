@@ -29,15 +29,14 @@ export function HeroSection() {
               style={titleFade.fadeInStyle}
               className="text-balance leading-tight text-foreground sm:mt-8 lg:mt-20 font-semibold px-0 w-auto sm:text-3xl lg:text-4xl text-2xl mt-28"
             >
-              Double Your Sales of <span className="text-primary">House <TypingAnimation words={["Extensions", "Conservatories", "Orangeries", "Verandas"]} /></span><br />with AI-Powered Visualisations
+              Double Your <span className="text-primary"><TypingAnimation words={["Extensions", "Conservatories", "Orangeries", "Verandas"]} /></span> <br className="sm:hidden" />Sales<br />with AI-Powered Visualisations
             </h1>
             <p
               ref={subtitleFade.ref}
               style={subtitleFade.fadeInStyle}
               className="text-pretty max-w-3xl mx-auto text-foreground px-2 sm:px-0 font-extralight sm:text-base gap-0 my-4 text-xs"
             >
-              Turn hesitation into instant desire. Show clients exactly how their dream extension looks on their home —
-              and close more deals on the spot.
+              Turn hesitation into instant desire. Show clients exactly how their dream extension looks on their home and close more deals on the spot.
             </p>
           </div>
           <div ref={buttonFade.ref} style={buttonFade.fadeInStyle} className="flex justify-center">

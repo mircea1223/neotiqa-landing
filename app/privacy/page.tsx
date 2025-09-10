@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Privacy Policy - ExtensionAI",
-  description: "Privacy policy for ExtensionAI AI-powered home extension visualization platform",
+  description: "Privacy policy for ExtensionAI AI-powered home extension visualisation platform",
 }
 
 export default function PrivacyPage() {
@@ -66,8 +66,8 @@ export default function PrivacyPage() {
 
               <h3 className="text-xl font-semibold text-foreground mb-3">Image Data</h3>
               <p className="mb-4 text-foreground/80">
-                When you upload images for visualization processing, we temporarily store and process these images
-                to generate AI-powered visualizations. We do not retain uploaded images longer than necessary
+                When you upload images for visualisation processing, we temporarily store and process these images
+                to generate AI-powered visualisations. We do not retain uploaded images longer than necessary
                 for service delivery.
               </p>
             </section>
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
               <p className="mb-4 text-foreground/80">We use the collected information for various purposes:</p>
               <ul className="list-disc pl-6 mb-4 text-foreground/80">
                 <li>To provide and maintain our Service</li>
-                <li>To process your visualization requests</li>
+                <li>To process your visualisation requests</li>
                 <li>To notify you about changes to our Service</li>
                 <li>To provide customer support</li>
                 <li>To gather analysis to improve our Service</li>
@@ -182,6 +182,7 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc pl-6 mb-4 text-foreground/80">
                 <li>By email: privacy@neotiqa.com</li>
+                <li>By post: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</li>
                 <li>Through our contact form on the website</li>
               </ul>
             </section>

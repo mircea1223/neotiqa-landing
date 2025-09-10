@@ -81,8 +81,8 @@ export function ImpactSection() {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="8"
-                      className="text-muted"
-                      opacity="0.3"
+                      className="text-border"
+                      opacity="0.6"
                     />
                     <circle
                       cx="60"

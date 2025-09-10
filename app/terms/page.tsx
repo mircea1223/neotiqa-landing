@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Terms and Conditions - ExtensionAI",
-  description: "Terms and conditions for ExtensionAI AI-powered home extension visualization platform",
+  description: "Terms and conditions for ExtensionAI AI-powered home extension visualisation platform",
 }
 
 export default function TermsPage() {
@@ -35,8 +35,8 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">2. Description of Service</h2>
               <p className="mb-4 text-foreground/80">
-                ExtensionAI provides AI-powered home extension visualization services that allow users to upload property photos
-                and generate realistic visualizations of potential extensions, conservatories, orangeries, and verandas.
+                ExtensionAI provides AI-powered home extension visualisation services that allow users to upload property photos
+                and generate realistic visualisations of potential extensions, conservatories, orangeries, and verandas.
               </p>
             </section>
 
@@ -58,7 +58,7 @@ export default function TermsPage() {
               <p className="mb-4 text-foreground/80">You agree not to use the Service to:</p>
               <ul className="list-disc pl-6 mb-4 text-foreground/80">
                 <li>Upload images that you do not own or have permission to use</li>
-                <li>Generate visualizations for illegal or unauthorized purposes</li>
+                <li>Generate visualisations for illegal or unauthorised purposes</li>
                 <li>Violate any applicable local, state, national, or international law</li>
                 <li>Transmit any material that infringes upon intellectual property rights</li>
                 <li>Use the service for commercial purposes without proper licensing</li>
@@ -77,7 +77,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-semibold text-foreground mb-4">6. User Content</h2>
               <p className="mb-4 text-foreground/80">
                 You retain ownership of images you upload. By uploading content, you grant us a limited license to process
-                and generate visualizations. We do not claim ownership of your uploaded images.
+                and generate visualisations. We do not claim ownership of your uploaded images.
               </p>
             </section>
 
@@ -123,8 +123,12 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">12. Contact Information</h2>
               <p className="mb-4 text-foreground/80">
-                If you have any questions about these Terms and Conditions, please contact us at legal@neotiqa.com
+                If you have any questions about these Terms and Conditions, please contact us:
               </p>
+              <ul className="list-disc pl-6 mb-4 text-foreground/80">
+                <li>By email: legal@neotiqa.com</li>
+                <li>By post: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</li>
+              </ul>
             </section>
           </div>
         </div>

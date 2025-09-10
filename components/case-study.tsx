@@ -1,9 +1,17 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { ComparisonModal } from "./comparison-modal"
 
 export function CaseStudy() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedComparison, setSelectedComparison] = useState<{
+    before: string;
+    after: string;
+    beforeAlt: string;
+    afterAlt: string;
+  } | null>(null)
   const [animatedData, setAnimatedData] = useState([
     { name: "Decision Speed", without: 0, with: 0 },
     { name: "Average Project", without: 0, with: 0 },
@@ -69,6 +77,16 @@ export function CaseStudy() {
     }
   }, [isVisible])
 
+  const openComparison = (before: string, after: string, beforeAlt: string, afterAlt: string) => {
+    setSelectedComparison({ before, after, beforeAlt, afterAlt })
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setSelectedComparison(null)
+  }
+
   return (
     <>
       <div className="w-full h-px bg-divider"></div>
@@ -90,20 +108,94 @@ export function CaseStudy() {
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <div className="space-y-2">
-                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Before</span>
-                <img
-                  src="/traditional-house-exterior-needing-extension.jpg"
-                  alt="House before extension"
-                  className="w-full sm:h-40 lg:h-48 object-cover rounded-lg h-40"
-                />
+                <span className="text-xs sm:text-sm font-medium text-foreground">Before</span>
+                <div className="grid grid-cols-1 gap-2">
+                  <div 
+                    className="relative cursor-pointer group"
+                    onClick={() => openComparison(
+                      '/images/case-study/before.jpg',
+                      '/images/case-study/after-main.jpg',
+                      'House before extension - main view',
+                      'House with AI-generated extension - main view'
+                    )}
+                  >
+                    <img
+                      src="/images/case-study/before.jpg"
+                      alt="House before extension - main view"
+                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        Click to compare
+                      </span>
+                    </div>
+                  </div>
+                  <div 
+                    className="relative cursor-pointer group"
+                    onClick={() => openComparison(
+                      '/images/case-study/before-landscape.jpg',
+                      '/images/case-study/after-interior-to-landscape.jpg',
+                      'House before extension - landscape view',
+                      'House with extension - interior to landscape view'
+                    )}
+                  >
+                    <img
+                      src="/images/case-study/before-landscape.jpg"
+                      alt="House before extension - landscape view"
+                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        Click to compare
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="space-y-2">
-                <span className="text-xs sm:text-sm font-medium text-chart-5">After</span>
-                <img
-                  src="/same-house-with-stunning-modern-extension-ai-gener.jpg"
-                  alt="House with AI-generated extension"
-                  className="sm:h-40 lg:h-48 object-cover rounded-lg h-40 w-full"
-                />
+                <span className="text-xs sm:text-sm font-medium text-foreground">After</span>
+                <div className="grid grid-cols-1 gap-2">
+                  <div 
+                    className="relative cursor-pointer group"
+                    onClick={() => openComparison(
+                      '/images/case-study/before.jpg',
+                      '/images/case-study/after-main.jpg',
+                      'House before extension - main view',
+                      'House with AI-generated extension - main view'
+                    )}
+                  >
+                    <img
+                      src="/images/case-study/after-main.jpg"
+                      alt="House with AI-generated extension - main view"
+                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        Click to compare
+                      </span>
+                    </div>
+                  </div>
+                  <div 
+                    className="relative cursor-pointer group"
+                    onClick={() => openComparison(
+                      '/images/case-study/before-landscape.jpg',
+                      '/images/case-study/after-interior-to-landscape.jpg',
+                      'House before extension - landscape view',
+                      'House with extension - interior to landscape view'
+                    )}
+                  >
+                    <img
+                      src="/images/case-study/after-interior-to-landscape.jpg"
+                      alt="House with extension - interior to landscape view"
+                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        Click to compare
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -152,7 +244,7 @@ export function CaseStudy() {
 
             <div className="space-y-3 sm:space-y-6 mt-4 sm:mt-0">
               <p className="sm:text-lg text-pretty text-foreground text-base">
-                By integrating AI-generated visualizations, businesses will:
+                By integrating AI-generated visualisations, businesses will:
               </p>
               <ul className="space-y-2 sm:space-y-3">
                 <li className="flex items-start gap-2 sm:gap-3">
@@ -178,6 +270,18 @@ export function CaseStudy() {
           </div>
         </div>
       </section>
+
+      {/* Comparison Modal */}
+      {selectedComparison && (
+        <ComparisonModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          beforeImage={selectedComparison.before}
+          afterImage={selectedComparison.after}
+          beforeAlt={selectedComparison.beforeAlt}
+          afterAlt={selectedComparison.afterAlt}
+        />
+      )}
     </>
   )
 }
