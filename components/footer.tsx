@@ -13,7 +13,15 @@ export function Footer() {
       e.preventDefault()
       const element = document.getElementById(sectionId)
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+        const headerOffset = 70; // Adjust for fixed header height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
       }
     }
     // If not on home page, let the Link component handle navigation with hash
