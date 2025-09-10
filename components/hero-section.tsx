@@ -29,7 +29,7 @@ export function HeroSection() {
               style={titleFade.fadeInStyle}
               className="text-balance leading-tight text-foreground sm:mt-8 lg:mt-20 font-semibold px-0 w-auto sm:text-3xl lg:text-4xl text-2xl mt-28"
             >
-              Double Your Sales of <span className="text-primary">House <TypingAnimation words={["Extensions", "Conservatories", "Orangeries", "Verandas"]} /></span> with AI-Powered Visualisations
+              Double Your Sales of <span className="text-primary">House <TypingAnimation words={["Extensions", "Conservatories", "Orangeries", "Verandas"]} /></span><br />with AI-Powered Visualisations
             </h1>
             <p
               ref={subtitleFade.ref}
