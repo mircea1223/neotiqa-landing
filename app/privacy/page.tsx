@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Privacy Policy - ExtensionAI",
@@ -8,16 +9,24 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="min-h-screen bg-background flex flex-col">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 flex-1">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <Link
-              href="/"
-              className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
-            >
-              ← Back to Home
-            </Link>
+            <div className="flex items-center justify-between">
+              <Link
+                href="/"
+                className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+              >
+                ← Back to Home
+              </Link>
+              <Link
+                href="/"
+                className="text-foreground hover:text-primary transition-colors text-sm font-medium font-montserrat tracking-wider"
+              >
+                NEOTIQA
+              </Link>
+            </div>
           </div>
           
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Privacy Policy</h1>
@@ -181,7 +190,7 @@ export default function PrivacyPage() {
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
               <ul className="list-disc pl-6 mb-4 text-foreground/80">
-                <li>By email: privacy@neotiqa.com</li>
+                <li>By email: hello@neotiqa.com</li>
                 <li>By post: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</li>
                 <li>Through our contact form on the website</li>
               </ul>
@@ -189,6 +198,7 @@ export default function PrivacyPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
