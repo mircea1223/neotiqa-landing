@@ -13,7 +13,8 @@ export function Footer() {
       e.preventDefault()
       const element = document.getElementById(sectionId)
       if (element) {
-        const headerOffset = 70; // Adjust for fixed header height
+        const isMobile = window.innerWidth < 768; // sm breakpoint
+        const headerOffset = isMobile ? 60 : 70; // 60px on mobile, 70px on desktop
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition =
           elementPosition + window.pageYOffset - headerOffset;
