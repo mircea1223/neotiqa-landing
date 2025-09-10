@@ -42,11 +42,11 @@ export function Navigation() {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-12 sm:h-16">
+        <div className="flex items-center justify-between h-12 sm:h-16 mt-2.5">
           <div className="flex-shrink-0">
             <button
               onClick={scrollToTop}
-              className="font-montserrat text-lg sm:text-xl text-moss hover:text-moss/80 transition-colors font-medium tracking-[0.2em]"
+              className="font-montserrat sm:text-xl text-moss hover:text-moss/80 transition-colors tracking-[0.2em] text-base font-normal"
             >
               NEOTIQA
             </button>
@@ -74,7 +74,7 @@ export function Navigation() {
                 Case Study
               </button>
               <button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => scrollToSection("cta")}
                 className="text-foreground hover:text-primary transition-colors text-sm font-thin"
               >
                 Contact
@@ -147,7 +147,7 @@ export function Navigation() {
                 Case Study
               </button>
               <button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => scrollToSection("cta")}
                 className="text-2xl font-medium text-foreground hover:text-primary transition-colors animate-in slide-in-from-bottom-4 fade-in duration-500"
                 style={{ animationDelay: "0.4s" }}
               >

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Mail, Phone } from "lucide-react"
 
 export function Footer() {
@@ -19,7 +20,8 @@ export function Footer() {
               <span className="text-xl font-light text-primary font-montserrat tracking-[0.1em]">NEOTIQA</span>
             </div>
             <p className="text-sm italic text-slate-100">
-              AI-Powered Tool that doubles conversion rates on House Extensions sales.
+              AI-Powered Tool that doubles conversion rates on construction 
+sales. 
             </p>
           </div>
 
@@ -68,7 +70,7 @@ export function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-semibold">Get Started</h4>
+            <h4 className="font-semibold text-white">Get Started</h4>
             <button
               onClick={() => scrollToSection("cta")}
               className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
@@ -78,8 +80,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-sm text-muted-foreground">© 2024 NEOTIQA. All rights reserved.</p>
+        <div className="border-t border-border mt-8 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">© 2025 NEOTIQA. All rights reserved.</p>
+            <div className="flex gap-6 text-sm">
+              <Link href="/privacy" className="text-white hover:text-primary transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-white hover:text-primary transition-colors">
+                Terms & Conditions
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

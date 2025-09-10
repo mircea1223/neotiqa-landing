@@ -22,7 +22,7 @@ export function CTASection() {
                 {" your "}
                 <span className="text-primary">Conversion Rate?</span>
               </h2>
-              <p className="text-pretty max-w-2xl mx-auto sm:text-base font-thin text-foreground px-4 sm:px-0 text-xs">
+              <p className="text-pretty max-w-2xl mx-auto sm:text-base text-foreground px-4 sm:px-0 text-xs font-light">
                 Get in touch to see how our AI platform can transform your business. Pricing adapted to your company's
                 size and needs.
               </p>

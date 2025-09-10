@@ -11,9 +11,9 @@ export function CaseStudy() {
   ])
 
   const finalData = [
-    { name: "Decision Speed", without: 40, with: 85 },
-    { name: "Average Project", without: 50, with: 90 },
-    { name: "Options Explored", without: 60, with: 95 },
+    { name: "Decision Speed", without: 23, with: 70 },
+    { name: "Average Project", without: 30, with: 85 },
+    { name: "Options Explored", without: 35, with: 96 },
   ]
 
   useEffect(() => {
@@ -75,14 +75,14 @@ export function CaseStudy() {
       <section id="case-study" className="py-12 sm:py-16 lg:py-20 bg-section">
         <div className="container mx-auto sm:px-6 lg:px-8 px-4">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-balance px-4 sm:px-8 lg:px-44 sm:text-3xl lg:text-4xl font-semibold text-sidebar-ring mt-0 py-0 text-2xl mb-0">
+            <h2 className="text-balance sm:px-8 lg:px-44 sm:text-3xl lg:text-4xl font-semibold text-sidebar-ring text-2xl text-left px-0 mt-0 py-0 gap-0 mb-0">
               {"Overcoming Client Hesitation with \nAI Visualization"}
             </h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-4 sm:gap-12 items-center mb-8 sm:mb-16">
             <div className="space-y-4 sm:space-y-6">
-              <p className="text-pretty sm:text-base font-thin text-foreground mx-2 px-0 mt-0 text-xs mb-0.5">
+              <p className="text-pretty sm:text-base text-foreground mx-2 px-0 mt-0 text-xs ml-0 pr-1.5 pl-0 mb-0.5 pb-0 font-light">
                 Clients often hesitate to approve extensions because they can't visualize the final result on their own
                 home. This uncertainty slows decisions, limits project scope, and reduces conversion potential.
               </p>
@@ -94,7 +94,7 @@ export function CaseStudy() {
                 <img
                   src="/traditional-house-exterior-needing-extension.jpg"
                   alt="House before extension"
-                  className="w-full h-24 sm:h-40 lg:h-48 object-cover rounded-lg"
+                  className="w-full sm:h-40 lg:h-48 object-cover rounded-lg h-40"
                 />
               </div>
               <div className="space-y-2">
@@ -102,7 +102,7 @@ export function CaseStudy() {
                 <img
                   src="/same-house-with-stunning-modern-extension-ai-gener.jpg"
                   alt="House with AI-generated extension"
-                  className="w-full h-24 sm:h-40 lg:h-48 object-cover rounded-lg"
+                  className="sm:h-40 lg:h-48 object-cover rounded-lg h-40 w-full"
                 />
               </div>
             </div>
@@ -111,11 +111,11 @@ export function CaseStudy() {
           <div className="grid lg:grid-cols-2 items-center gap-4 sm:gap-12">
             <div
               id="case-study-chart"
-              className="bg-card rounded-lg p-2 sm:p-4 border border-border sm:py-4 mt-4 sm:mt-16"
+              className="bg-card rounded-lg p-2 sm:p-4 border border-border sm:py-4 mt-4 sm:mt-16 pb-6"
             >
               <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-6 mt-2">
                 <div className="space-y-2 sm:space-y-4">
-                  <h5 className="text-xs sm:text-base font-medium text-center text-chart-1">Without AI</h5>
+                  <h5 className="text-xs sm:text-base font-medium text-center text-chart-1">Before NEOTIQA</h5>
                   {animatedData.map((item, index) => (
                     <div key={`without-${index}`} className="space-y-1">
                       <div className="flex justify-between items-center">
@@ -132,7 +132,7 @@ export function CaseStudy() {
                 </div>
 
                 <div className="space-y-2 sm:space-y-4">
-                  <h5 className="text-xs sm:text-base font-medium text-center text-primary">With AI</h5>
+                  <h5 className="text-xs sm:text-base font-medium text-center text-primary">After NEOTIQA</h5>
                   {animatedData.map((item, index) => (
                     <div key={`with-${index}`} className="space-y-1">
                       <div className="flex justify-between items-center">
@@ -152,7 +152,7 @@ export function CaseStudy() {
 
             <div className="space-y-3 sm:space-y-6 mt-4 sm:mt-0">
               <p className="sm:text-lg text-pretty text-foreground text-base">
-                By integrating AI-generated visualizations, businesses could:
+                By integrating AI-generated visualizations, businesses will:
               </p>
               <ul className="space-y-2 sm:space-y-3">
                 <li className="flex items-start gap-2 sm:gap-3">

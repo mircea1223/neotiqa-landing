@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${montserrat.variable} ${GeistMono.variable}`}>
-        <ThemeProvider defaultTheme="dark">
+        <ThemeProvider defaultTheme="light">
           <Suspense fallback={null}>{children}</Suspense>
         </ThemeProvider>
         <Analytics />

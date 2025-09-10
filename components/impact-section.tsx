@@ -8,9 +8,9 @@ export function ImpactSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   const stats = [
-    { value: 65, label: "More Approvals", suffix: "%" },
-    { value: 40, label: "Faster Decision-Making", suffix: "%" },
-    { value: 25, label: "Larger Average Project Size", suffix: "%" },
+    { value: 17, label: "More Approvals", suffix: "%" },
+    { value: 27, label: "Larger Average Project Size", suffix: "%" },
+    { value: 41, label: "Faster Decision-Making", suffix: "%" },
   ]
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export function ImpactSection() {
             <h2 className="sm:text-3xl lg:text-4xl font-bold text-balance mb-4 text-foreground text-2xl">
               The <span className="text-primary">Numbers</span> That Matter
             </h2>
-            <p className="max-w-2xl mx-auto text-pretty sm:text-base text-foreground font-extralight px-4 sm:px-0 text-xs">
+            <p className="max-w-2xl mx-auto text-pretty sm:text-base text-foreground px-4 sm:px-0 text-xs font-light">
               Real impact results from using our AI-Powered tool.
             </p>
           </div>
@@ -110,7 +110,7 @@ export function ImpactSection() {
                     </span>
                   </div>
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-balance px-2 sm:px-0 text-white">
+                <h3 className="text-base sm:text-lg font-semibold text-balance px-2 sm:px-0 text-foreground">
                   {stat.label}
                 </h3>
               </div>

@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { BeforeAfterSlider } from "./before-after-slider"
+import { TypingAnimation } from "./typing-animation"
 import { useFadeIn } from "@/hooks/use-fade-in"
 
 export function HeroSection() {
@@ -26,9 +27,9 @@ export function HeroSection() {
             <h1
               ref={titleFade.ref}
               style={titleFade.fadeInStyle}
-              className="text-balance leading-tight text-foreground sm:mt-8 lg:mt-20 font-semibold px-0 w-auto sm:text-3xl lg:text-4xl mt-20 text-2xl"
+              className="text-balance leading-tight text-foreground sm:mt-8 lg:mt-20 font-semibold px-0 w-auto sm:text-3xl lg:text-4xl text-2xl mt-28"
             >
-              Double Your Sales of <span className="text-primary">House Extensions</span> with AI-Powered Visualizations
+              Double Your Sales of <span className="text-primary">House <TypingAnimation words={["Extensions", "Conservatories", "Orangeries", "Verandas"]} /></span> with AI-Powered Visualisations
             </h1>
             <p
               ref={subtitleFade.ref}
@@ -54,9 +55,12 @@ export function HeroSection() {
         <div
           ref={sliderFade.ref}
           style={sliderFade.fadeInStyle}
-          className="flex-1 flex items-center justify-center py-0 px-0 mt-0 mb-8"
+          className="flex-1 flex flex-col items-center justify-center py-0 px-0 mt-0 mb-8"
         >
           <div className="w-full max-w-4xl px-2 sm:px-0">
+            <p className="text-center text-foreground/70 text-xs sm:text-sm mb-3 font-light">
+              Drag the slider to see the transformation
+            </p>
             <BeforeAfterSlider
               beforeImage="/images/house-before.png"
               afterImage="/images/house-after.png"

@@ -34,7 +34,7 @@ export function HowItWorks() {
             <h2 className="font-bold text-balance mb-2 sm:mb-4 text-sidebar-ring sm:text-2xl lg:text-3xl xl:text-4xl text-2xl">
               How it works
             </h2>
-            <p className="max-w-2xl mx-auto text-pretty sm:text-sm lg:text-base text-foreground font-extralight px-4 sm:px-0 text-xs">
+            <p className="max-w-2xl mx-auto text-pretty sm:text-sm lg:text-base text-foreground px-4 sm:px-0 text-xs font-light">
               Our platform transforms a simple photo of a client's home into a sales-closing visualization — as you
               blink.
             </p>
