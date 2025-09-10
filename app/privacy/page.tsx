@@ -191,6 +191,7 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc pl-6 mb-4 text-foreground/80">
                 <li>By email: hello@neotiqa.com</li>
+                <li>By phone: +44 20 8191 3412</li>
                 <li>By post: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</li>
                 <li>Through our contact form on the website</li>
               </ul>

@@ -85,7 +85,7 @@ sales.
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
-                <span className="text-white">+1 (555) 123-4567</span>
+                <span className="text-white">+44 20 8191 3412</span>
               </div>
             </div>
           </div>

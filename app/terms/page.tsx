@@ -205,6 +205,7 @@ export default function TermsPage() {
               </p>
               <ul className="list-disc pl-6 mb-4 text-foreground/80">
                 <li>By email: hello@neotiqa.com</li>
+                <li>By phone: +44 20 8191 3412</li>
                 <li>
                   By post: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ
                 </li>
