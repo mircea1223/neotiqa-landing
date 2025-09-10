@@ -1,3 +1,5 @@
+"use client"
+
 import { Upload, Settings, Zap } from "lucide-react"
 import { useFadeIn } from "@/hooks/use-fade-in"
 
