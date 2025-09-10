@@ -22,7 +22,7 @@ export function HeroSection() {
     <section id="hero" className="min-h-screen flex flex-col bg-section">
       {/* Centered headline and CTA section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 lg:py-20 flex-1 flex flex-col">
-        <div className="text-center space-y-4 sm:space-y-6 lg:space-y-8 sm:mb-8 lg:mb-12 mb-12">
+        <div className="text-center space-y-4 sm:space-y-6 lg:space-y-8 sm:mb-8 lg:mb-12 mb-4">
           <div className="space-y-2 sm:space-y-3 lg:space-y-4">
             <h1
               ref={titleFade.ref}
@@ -54,7 +54,7 @@ export function HeroSection() {
         <div
           ref={sliderFade.ref}
           style={sliderFade.fadeInStyle}
-          className="flex-1 flex flex-col items-center justify-center py-0 px-0 mt-0 mb-8"
+          className="flex flex-col items-center justify-center py-0 px-0 mt-8 mb-0"
         >
           <div className="w-full max-w-4xl px-2 sm:px-0">
             <p className="text-center text-foreground/70 text-xs sm:text-sm mb-3 font-light">
