@@ -4,81 +4,87 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color tokens for techy purple theme with glass morphism */
-  --background: oklch(0.12 0.01 240); /* Dark grey-black background */
-  --foreground: oklch(0.98 0.005 0); /* White text */
-  --card: oklch(0.18 0.01 240 / 0.8); /* Slightly lighter grey for cards with glass effect */
-  --card-foreground: oklch(0.98 0.005 0);
-  --popover: oklch(0.18 0.01 240 / 0.9); /* Glass effect for popovers */
-  --popover-foreground: oklch(0.98 0.005 0);
-  --primary: oklch(0.65 0.2 270); /* Techy purple for primary buttons #8b5cf6 */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.22 0.01 240); /* Darker grey for secondary elements */
-  --secondary-foreground: oklch(0.98 0.005 0);
-  --muted: oklch(0.45 0.01 240); /* Muted grey text */
-  --muted-foreground: oklch(0.7 0.005 0);
-  --accent: oklch(0.65 0.2 270); /* Techy purple accent */
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.55 0.2 25); /* Error color */
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.25 0.01 240); /* Subtle grey borders */
-  --input: oklch(0.18 0.01 240); /* Input backgrounds */
-  --ring: oklch(0.65 0.2 270 / 0.5); /* Focus rings with purple */
-  --chart-1: oklch(0.65 0.2 270);
-  --chart-2: oklch(0.7 0.15 270);
-  --chart-3: oklch(0.75 0.1 270);
-  --chart-4: oklch(0.8 0.08 270);
-  --chart-5: oklch(0.85 0.05 270);
+  /* Updated to use new Night/Ivory/Sage palette with better contrast for light mode */
+  --background: #fbfaef; /* Ivory - light background */
+  --foreground: #151414; /* Night - dark text */
+  --card: #fbfaef; /* Ivory - light card background */
+  --card-foreground: #151414; /* Night - dark card text */
+  --popover: #fbfaef; /* Ivory - light popover */
+  --popover-foreground: #151414; /* Night - dark popover text */
+  --primary: #8a8766; /* Darker sage for better contrast on light background */
+  --primary-foreground: #fbfaef; /* Ivory text on primary for better contrast */
+  --secondary: #8a8766; /* Darker sage for better contrast */
+  --secondary-foreground: #fbfaef; /* Ivory text on secondary */
+  --muted: #f0efea; /* Slightly darker ivory for muted elements */
+  --muted-foreground: #6b6a5a; /* Much darker sage for better contrast on light background */
+  --accent: #8a8766; /* Darker sage for better contrast */
+  --accent-foreground: #fbfaef; /* Ivory text on accent */
+  --destructive: #b85450; /* Muted red for warnings */
+  --destructive-foreground: #fbfaef; /* Ivory - text on destructive */
+  --border: #d4d3ce; /* Darker border for better visibility */
+  --input: #f0efea; /* Slightly darker ivory for inputs */
+  --ring: #8a8766; /* Darker sage for focus ring */
+  --chart-1: #8a8766; /* Darker sage */
+  --chart-2: #151414; /* Night */
+  --chart-3: #6b6a5a; /* Much darker sage */
+  --chart-4: #9a9a7a; /* Darker sage */
+  --chart-5: #b6b091; /* Original sage */
   --radius: 0.5rem;
-  --sidebar: oklch(0.15 0.01 240);
-  --sidebar-foreground: oklch(0.98 0.005 0);
-  --sidebar-primary: oklch(0.65 0.2 270);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.22 0.01 240);
-  --sidebar-accent-foreground: oklch(0.98 0.005 0);
-  --sidebar-border: oklch(0.25 0.01 240);
-  --sidebar-ring: oklch(0.65 0.2 270 / 0.5);
+  --sidebar: #fbfaef; /* Ivory - light sidebar */
+  --sidebar-foreground: #151414; /* Night - dark sidebar text */
+  --sidebar-primary: #8a8766; /* Darker sage for better contrast */
+  --sidebar-primary-foreground: #fbfaef; /* Ivory text on sidebar primary */
+  --sidebar-accent: #8a8766; /* Darker sage for better contrast */
+  --sidebar-accent-foreground: #fbfaef; /* Ivory text on sidebar accent */
+  --sidebar-border: #d4d3ce; /* Darker border */
+  --sidebar-ring: #8a8766; /* Darker sage for focus ring */
+  --section-bg: #fbfaef; /* Ivory - section background */
+  --divider: #d4d3ce; /* Darker divider for better visibility */
 }
 
 .dark {
-  /* Dark mode tokens maintaining the techy purple theme */
-  --background: oklch(0.08 0.01 240); /* Even darker for dark mode */
-  --foreground: oklch(0.98 0.005 0);
-  --card: oklch(0.15 0.01 240 / 0.8);
-  --card-foreground: oklch(0.98 0.005 0);
-  --popover: oklch(0.15 0.01 240 / 0.9);
-  --popover-foreground: oklch(0.98 0.005 0);
-  --primary: oklch(0.65 0.2 270);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.18 0.01 240);
-  --secondary-foreground: oklch(0.98 0.005 0);
-  --muted: oklch(0.35 0.01 240);
-  --muted-foreground: oklch(0.65 0.005 0);
-  --accent: oklch(0.65 0.2 270);
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.45 0.15 25);
-  --destructive-foreground: oklch(0.65 0.2 25);
-  --border: oklch(0.22 0.01 240);
-  --input: oklch(0.15 0.01 240);
-  --ring: oklch(0.65 0.2 270 / 0.5);
-  --chart-1: oklch(0.55 0.2 270);
-  --chart-2: oklch(0.7 0.15 160);
-  --chart-3: oklch(0.75 0.15 70);
-  --chart-4: oklch(0.65 0.2 300);
-  --chart-5: oklch(0.65 0.2 15);
-  --sidebar: oklch(0.12 0.01 240);
-  --sidebar-foreground: oklch(0.98 0.005 0);
-  --sidebar-primary: oklch(0.55 0.2 270);
-  --sidebar-primary-foreground: oklch(0.98 0.005 0);
-  --sidebar-accent: oklch(0.18 0.01 240);
-  --sidebar-accent-foreground: oklch(0.98 0.005 0);
-  --sidebar-border: oklch(0.22 0.01 240);
-  --sidebar-ring: oklch(0.65 0.2 270 / 0.5);
+  /* Updated dark mode colors to use new Night/Ivory/Sage palette */
+  --background: #151414; /* Night - dark background */
+  --foreground: #fbfaef; /* Ivory - light text */
+  --card: #151414; /* Night - dark card background */
+  --card-foreground: #fbfaef; /* Ivory - light card text */
+  --popover: #151414; /* Night - dark popover */
+  --popover-foreground: #fbfaef; /* Ivory - light popover text */
+  --primary: #b6b091; /* Sage - primary color */
+  --primary-foreground: #151414; /* Night - text on primary */
+  --secondary: #b6b091; /* Sage - secondary color */
+  --secondary-foreground: #151414; /* Night - text on secondary */
+  --muted: #2a2928; /* Slightly lighter night for muted elements */
+  --muted-foreground: #b6b091; /* Sage - muted text */
+  --accent: #b6b091; /* Sage - accent */
+  --accent-foreground: #151414; /* Night - text on accent */
+  --destructive: #b85450; /* Muted red for warnings */
+  --destructive-foreground: #fbfaef; /* Ivory - text on destructive */
+  --border: #3a3938; /* Lighter night for borders */
+  --input: #2a2928; /* Slightly lighter night for inputs */
+  --ring: #b6b091; /* Sage - focus ring */
+  --chart-1: #b6b091; /* Sage */
+  --chart-2: #fbfaef; /* Ivory */
+  --chart-3: #9a9a7a; /* Darker sage */
+  --chart-4: #c8c8a8; /* Lighter sage */
+  --chart-5: #d4d4b5; /* Even lighter sage */
+  --sidebar: #151414; /* Night - dark sidebar */
+  --sidebar-foreground: #fbfaef; /* Ivory - light sidebar text */
+  --sidebar-primary: #b6b091; /* Sage - sidebar primary */
+  --sidebar-primary-foreground: #151414; /* Night - sidebar primary text */
+  --sidebar-accent: #b6b091; /* Sage - sidebar accent */
+  --sidebar-accent-foreground: #151414; /* Night - sidebar accent text */
+  --sidebar-border: #3a3938; /* Lighter night - sidebar border */
+  --sidebar-ring: #b6b091; /* Sage - sidebar focus ring */
+  --section-bg: #151414; /* Night - section background */
+  --divider: #3a3938; /* Lighter night for section dividers */
 }
 
 @theme inline {
+  /* Updated to use Montserrat as primary font instead of Geist */
   --font-sans: var(--font-montserrat);
   --font-mono: var(--font-geist-mono);
+  --font-montserrat: var(--font-montserrat);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -115,6 +121,8 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-section-bg: var(--section-bg);
+  --color-divider: var(--divider);
 }
 
 @layer base {
@@ -126,81 +134,70 @@
   }
 }
 
+/* Updated utility classes with better contrast colors */
 @layer utilities {
-  .bg-grid-pattern {
-    background-image: linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
+  .bg-section {
+    background-color: var(--section-bg);
   }
 
-  .bg-circuit-pattern {
-    background-image: radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.2) 2px, transparent 2px),
-      radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.15) 1px, transparent 1px),
-      linear-gradient(45deg, transparent 40%, rgba(139, 92, 246, 0.05) 50%, transparent 60%);
-    background-size: 100px 100px, 60px 60px, 200px 200px;
+  .bg-divider {
+    background-color: var(--divider);
   }
 
-  .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  .text-ivory {
+    color: #fbfaef;
   }
 
-  .tech-glow {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1), inset 0 1px 0
-      rgba(255, 255, 255, 0.1);
+  .text-sage {
+    color: #8a8766; /* Using darker sage for better contrast */
   }
 
-  .gradient-text {
-    background: linear-gradient(135deg, #8b5cf6, #a855f7, #c084fc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .text-sage-light {
+    color: #b6b091; /* Original sage for dark backgrounds */
   }
 
-  .tech-border {
-    position: relative;
+  .text-night {
+    color: #151414;
   }
 
-  .tech-border::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), transparent, rgba(139, 92, 246, 0.3));
-    border-radius: inherit;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: xor;
-    -webkit-mask-composite: xor;
+  .bg-ivory {
+    background-color: #fbfaef;
   }
 
-  .glass-button {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
+  .bg-sage {
+    background-color: #8a8766; /* Using darker sage */
   }
 
-  .glass-button:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+  .bg-sage-light {
+    background-color: #b6b091; /* Original sage for accents */
   }
 
-  .glass-button-primary {
-    background: rgba(139, 92, 246, 0.2);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(139, 92, 246, 0.4);
-    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  .bg-night {
+    background-color: #151414;
   }
 
-  .glass-button-primary:hover {
-    background: rgba(139, 92, 246, 0.3);
-    border-color: rgba(139, 92, 246, 0.6);
-    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+  .border-divider {
+    border-color: var(--divider);
+  }
+
+  .font-montserrat {
+    font-family: var(--font-montserrat);
+  }
+
+  /* Updated form input colors for better contrast */
+  .text-input-dark {
+    color: #fbfaef !important;
+  }
+
+  .text-input-light {
+    color: #151414 !important;
+  }
+
+  .placeholder-input-dark::placeholder {
+    color: #b6b091 !important;
+  }
+
+  .placeholder-input-light::placeholder {
+    color: #6b6a5a !important; /* Darker placeholder for better contrast */
   }
 }

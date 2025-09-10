@@ -1,19 +1,22 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { GeistMono } from "geist/font/mono"
 import { Montserrat } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { ThemeProvider } from "@/contexts/theme-context"
 import "./globals.css"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-montserrat",
   weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
 })
 
 export const metadata: Metadata = {
-  title: "NEOTIQA - AI Automation Solutions",
-  description: "Transform your business with intelligent automation solutions",
+  title: "ExtensionAI - AI-Powered Home Extension Visualization",
+  description:
+    "Show clients their future home instantly with AI-generated extensions. Boost approval rates with realistic extension designs.",
   generator: "v0.app",
 }
 
@@ -24,8 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${montserrat.variable} antialiased`}>
-        <Suspense fallback={null}>{children}</Suspense>
+      <body className={`font-sans ${montserrat.variable} ${GeistMono.variable}`}>
+        <ThemeProvider defaultTheme="dark">
+          <Suspense fallback={null}>{children}</Suspense>
+        </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )

@@ -1,224 +1,183 @@
 "use client"
 
-import { useState } from "react"
-import Link from "next/link"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { ChevronDown, Menu, Zap } from "lucide-react"
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "@/contexts/theme-context"
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+      setIsMobileMenuOpen(false)
+    }
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+    setIsMobileMenuOpen(false)
+  }
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark")
+  }
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4">
-        <div className="flex h-14 sm:h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            
-            <span className="text-foreground tracking-[0.2em] text-xl font-medium font-sans">NEOTIQA</span>
-          </Link>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background/95 backdrop-blur-sm border-b border-border" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-12 sm:h-16">
+          <div className="flex-shrink-0">
+            <button
+              onClick={scrollToTop}
+              className="font-montserrat text-lg sm:text-xl text-moss hover:text-moss/80 transition-colors font-medium tracking-[0.2em]"
+            >
+              NEOTIQA
+            </button>
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            {/* Solutions Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors text-sm xl:text-base">
-                <span>Solutions</span>
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 glass-card border-border/40">
-                <DropdownMenuItem asChild>
-                  <Link href="/solutions" className="w-full">
-                    All Solutions
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/solutions?filter=sales" className="w-full">
-                    Sales Automation
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/solutions?filter=finance" className="w-full">
-                    Finance Automation
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/solutions?filter=hr" className="w-full">
-                    HR Automation
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/solutions?filter=support" className="w-full">
-                    Customer Support
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {/* Industries Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors text-sm xl:text-base">
-                <span>Industries</span>
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 glass-card border-border/40">
-                <DropdownMenuItem asChild>
-                  <Link href="/industries/healthcare" className="w-full">
-                    Healthcare
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/industries/financial-services" className="w-full">
-                    Financial Services
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/industries/ecommerce" className="w-full">
-                    E-commerce
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>SaaS</DropdownMenuItem>
-                <DropdownMenuItem>Manufacturing</DropdownMenuItem>
-                <DropdownMenuItem>Real Estate</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <Link
-              href="/case-studies"
-              className="text-foreground hover:text-primary transition-colors text-sm xl:text-base"
-            >
-              Case Studies
-            </Link>
-
-            {/* Resources Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors text-sm xl:text-base">
-                <span>Resources</span>
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 glass-card border-border/40">
-                <DropdownMenuItem asChild>
-                  <Link href="/resources/blog" className="w-full">
-                    Blog
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>Guides</DropdownMenuItem>
-                <DropdownMenuItem>Webinars</DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/resources/roi-calculator" className="w-full">
-                    ROI Calculator
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>Documentation</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <Link href="/about" className="text-foreground hover:text-primary transition-colors text-sm xl:text-base">
-              About
-            </Link>
-
-            <Link href="/contact" className="text-foreground hover:text-primary transition-colors text-sm xl:text-base">
-              Contact
-            </Link>
+          <div className="hidden md:block w-auto mr-6">
+            <div className="ml-10 flex items-baseline space-x-8">
+              <button
+                onClick={() => scrollToSection("how-it-works")}
+                className="text-foreground hover:text-primary transition-colors text-sm font-thin"
+              >
+                How It Works
+              </button>
+              <button
+                onClick={() => scrollToSection("impact")}
+                className="text-foreground hover:text-primary transition-colors text-sm font-thin"
+              >
+                Impact
+              </button>
+              <button
+                onClick={() => scrollToSection("case-study")}
+                className="text-foreground hover:text-primary transition-colors text-sm font-thin"
+              >
+                Case Study
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="text-foreground hover:text-primary transition-colors text-sm font-thin"
+              >
+                Contact
+              </button>
+            </div>
           </div>
 
-          {/* CTA Button - Hidden on mobile, visible on tablet+ */}
-          <div className="hidden md:flex">
-            <Link
-              href="/quiz"
-              className="glass-button-primary text-primary-foreground px-4 lg:px-6 py-2 rounded-lg text-sm font-medium lg:text-sm"
+          <div className="hidden md:flex items-center space-x-4">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleTheme}
+              className="p-2 hover:bg-muted"
+              aria-label="Toggle theme"
             >
-              Get Free Audit
-            </Link>
+              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </Button>
+            <Button onClick={() => scrollToSection("cta")} className="bg-primary hover:bg-primary/90">
+              Book a Demo
+            </Button>
           </div>
 
-          {/* Mobile Menu */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" className="h-9 w-9 glass-button">
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-72 sm:w-80 glass-card">
-              <div className="flex flex-col space-y-6 mt-6">
-                <Link
-                  href="/solutions"
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Solutions
-                </Link>
-
-                <div className="space-y-3 pl-4">
-                  <Link
-                    href="/solutions?filter=sales"
-                    className="block text-muted-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Sales Automation
-                  </Link>
-                  <Link
-                    href="/solutions?filter=finance"
-                    className="block text-muted-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Finance Automation
-                  </Link>
-                  <Link
-                    href="/solutions?filter=hr"
-                    className="block text-muted-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    HR Automation
-                  </Link>
-                  <Link
-                    href="/solutions?filter=support"
-                    className="block text-muted-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Customer Support
-                  </Link>
-                </div>
-
-                <Link
-                  href="/case-studies"
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Case Studies
-                </Link>
-
-                <Link
-                  href="/about"
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  About
-                </Link>
-
-                <Link
-                  href="/contact"
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contact
-                </Link>
-
-                <div className="pt-6 border-t border-border">
-                  <Link
-                    href="/quiz"
-                    onClick={() => setIsOpen(false)}
-                    className="w-full glass-button-primary text-primary-foreground px-4 py-3 rounded-lg text-center font-medium block"
-                  >
-                    Get Free Audit
-                  </Link>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="relative w-8 h-8 flex flex-col justify-center items-center focus:outline-none z-50"
+              aria-label="Toggle menu"
+            >
+              <span
+                className={`block w-6 h-0.5 bg-foreground transition-all duration-500 ease-in-out ${
+                  isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                }`}
+              />
+              <span
+                className={`block w-6 h-0.5 bg-foreground transition-all duration-500 ease-in-out mt-1 ${
+                  isMobileMenuOpen ? "opacity-0 w-0" : ""
+                }`}
+              />
+              <span
+                className={`block w-6 h-0.5 bg-foreground transition-all duration-500 ease-in-out mt-1 ${
+                  isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                }`}
+              />
+            </button>
+          </div>
         </div>
+
+        {isMobileMenuOpen && (
+          <div className="md:hidden fixed inset-0 top-0 left-0 w-full h-full bg-background z-40 flex flex-col justify-center items-center animate-in fade-in duration-500">
+            <div className="flex flex-col items-center space-y-8 text-center">
+              <button
+                onClick={() => scrollToSection("how-it-works")}
+                className="text-2xl font-medium text-foreground hover:text-primary transition-colors animate-in slide-in-from-bottom-4 fade-in duration-500"
+                style={{ animationDelay: "0.1s" }}
+              >
+                How It Works
+              </button>
+              <button
+                onClick={() => scrollToSection("impact")}
+                className="text-2xl font-medium text-foreground hover:text-primary transition-colors animate-in slide-in-from-bottom-4 fade-in duration-500"
+                style={{ animationDelay: "0.2s" }}
+              >
+                Impact
+              </button>
+              <button
+                onClick={() => scrollToSection("case-study")}
+                className="text-2xl font-medium text-foreground hover:text-primary transition-colors animate-in slide-in-from-bottom-4 fade-in duration-500"
+                style={{ animationDelay: "0.3s" }}
+              >
+                Case Study
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="text-2xl font-medium text-foreground hover:text-primary transition-colors animate-in slide-in-from-bottom-4 fade-in duration-500"
+                style={{ animationDelay: "0.4s" }}
+              >
+                Contact
+              </button>
+
+              <div className="w-full max-w-xs">
+                <div className="border-t border-border/30 mb-6"></div>
+                <div
+                  className="flex items-center justify-center space-x-4 animate-in slide-in-from-bottom-4 fade-in duration-500"
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  <span className="text-lg font-medium text-foreground">Theme</span>
+                  <Button variant="ghost" size="sm" onClick={toggleTheme} className="p-2" aria-label="Toggle theme">
+                    {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                  </Button>
+                </div>
+                <div className="border-t border-border/30 mt-6"></div>
+              </div>
+
+              <Button
+                onClick={() => scrollToSection("cta")}
+                className="bg-primary hover:bg-primary/90 text-lg px-8 py-3 animate-in slide-in-from-bottom-4 fade-in duration-500"
+                style={{ animationDelay: "0.6s" }}
+              >
+                Book a Demo
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   )
