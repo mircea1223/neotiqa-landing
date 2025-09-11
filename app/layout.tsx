@@ -14,11 +14,11 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "ExtensionAI - AI-Powered Home Extension Visualization",
+  title: "AI-Powered Construction Design Visualisation",
   description:
     "Show clients their future home instantly with AI-generated extensions. Boost approval rates with realistic extension designs.",
-  generator: "v0.app",
-}
+  generator: "react.app",
+};
 
 export default function RootLayout({
   children,

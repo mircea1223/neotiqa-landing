@@ -94,30 +94,36 @@ export function CaseStudy() {
         <div className="container mx-auto sm:px-6 lg:px-8 px-4">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-balance sm:px-8 lg:px-44 sm:text-3xl lg:text-4xl font-semibold text-sidebar-ring text-2xl text-left px-0 mt-0 py-0 gap-0 mb-0">
-              {"Overcoming Client Hesitation with \nAI Visualization"}
+              {"Overcoming Client Hesitation with \nAI Visualisation"}
             </h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-4 sm:gap-12 items-center mb-8 sm:mb-16">
             <div className="space-y-4 sm:space-y-6">
               <p className="text-pretty sm:text-base text-foreground mx-2 px-0 mt-0 text-xs ml-0 pr-1.5 pl-0 mb-0.5 pb-0 font-light">
-                Clients often hesitate to approve extensions because they can't visualize the final result on their own
-                home. This uncertainty slows decisions, limits project scope, and reduces conversion potential.
+                Clients often hesitate to approve extensions because they can't
+                visualize the final result on their own home. This uncertainty
+                slows decisions, limits project scope, and reduces conversion
+                potential.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <div className="space-y-2">
-                <span className="text-xs sm:text-sm font-medium text-foreground">Before</span>
+                <span className="text-xs sm:text-sm font-medium text-foreground">
+                  Before
+                </span>
                 <div className="grid grid-cols-1 gap-2">
-                  <div 
+                  <div
                     className="relative cursor-pointer group"
-                    onClick={() => openComparison(
-                      '/images/case-study/before.jpg',
-                      '/images/case-study/after-main.jpg',
-                      'House before extension - main view',
-                      'House with AI-generated extension - main view'
-                    )}
+                    onClick={() =>
+                      openComparison(
+                        "/images/case-study/before.jpg",
+                        "/images/case-study/after-main.jpg",
+                        "House before extension - main view",
+                        "House with AI-generated extension - main view"
+                      )
+                    }
                   >
                     <img
                       src="/images/case-study/before.jpg"
@@ -130,14 +136,16 @@ export function CaseStudy() {
                       </span>
                     </div>
                   </div>
-                  <div 
+                  <div
                     className="relative cursor-pointer group"
-                    onClick={() => openComparison(
-                      '/images/case-study/before-landscape.jpg',
-                      '/images/case-study/after-interior-to-landscape.jpg',
-                      'House before extension - landscape view',
-                      'House with extension - interior to landscape view'
-                    )}
+                    onClick={() =>
+                      openComparison(
+                        "/images/case-study/before-landscape.jpg",
+                        "/images/case-study/after-interior-to-landscape.jpg",
+                        "House before extension - landscape view",
+                        "House with extension - interior to landscape view"
+                      )
+                    }
                   >
                     <img
                       src="/images/case-study/before-landscape.jpg"
@@ -153,16 +161,20 @@ export function CaseStudy() {
                 </div>
               </div>
               <div className="space-y-2">
-                <span className="text-xs sm:text-sm font-medium text-foreground">After</span>
+                <span className="text-xs sm:text-sm font-medium text-foreground">
+                  After
+                </span>
                 <div className="grid grid-cols-1 gap-2">
-                  <div 
+                  <div
                     className="relative cursor-pointer group"
-                    onClick={() => openComparison(
-                      '/images/case-study/before.jpg',
-                      '/images/case-study/after-main.jpg',
-                      'House before extension - main view',
-                      'House with AI-generated extension - main view'
-                    )}
+                    onClick={() =>
+                      openComparison(
+                        "/images/case-study/before.jpg",
+                        "/images/case-study/after-main.jpg",
+                        "House before extension - main view",
+                        "House with AI-generated extension - main view"
+                      )
+                    }
                   >
                     <img
                       src="/images/case-study/after-main.jpg"
@@ -175,14 +187,16 @@ export function CaseStudy() {
                       </span>
                     </div>
                   </div>
-                  <div 
+                  <div
                     className="relative cursor-pointer group"
-                    onClick={() => openComparison(
-                      '/images/case-study/before-landscape.jpg',
-                      '/images/case-study/after-interior-to-landscape.jpg',
-                      'House before extension - landscape view',
-                      'House with extension - interior to landscape view'
-                    )}
+                    onClick={() =>
+                      openComparison(
+                        "/images/case-study/before-landscape.jpg",
+                        "/images/case-study/after-interior-to-landscape.jpg",
+                        "House before extension - landscape view",
+                        "House with extension - interior to landscape view"
+                      )
+                    }
                   >
                     <img
                       src="/images/case-study/after-interior-to-landscape.jpg"
@@ -207,11 +221,15 @@ export function CaseStudy() {
             >
               <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-6 mt-2">
                 <div className="space-y-2 sm:space-y-4">
-                  <h5 className="text-xs sm:text-base font-medium text-center text-chart-1">Before NEOTIQA</h5>
+                  <h5 className="text-xs sm:text-base font-medium text-center text-chart-1">
+                    Before NEOTIQA
+                  </h5>
                   {animatedData.map((item, index) => (
                     <div key={`without-${index}`} className="space-y-1">
                       <div className="flex justify-between items-center">
-                        <span className="text-xs font-medium text-muted-foreground">{item.name}</span>
+                        <span className="text-xs font-medium text-muted-foreground">
+                          {item.name}
+                        </span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-2 sm:h-4 overflow-hidden">
                         <div
@@ -224,11 +242,15 @@ export function CaseStudy() {
                 </div>
 
                 <div className="space-y-2 sm:space-y-4">
-                  <h5 className="text-xs sm:text-base font-medium text-center text-primary">After NEOTIQA</h5>
+                  <h5 className="text-xs sm:text-base font-medium text-center text-primary">
+                    After NEOTIQA
+                  </h5>
                   {animatedData.map((item, index) => (
                     <div key={`with-${index}`} className="space-y-1">
                       <div className="flex justify-between items-center">
-                        <span className="text-xs font-medium text-muted-foreground">{item.name}</span>
+                        <span className="text-xs font-medium text-muted-foreground">
+                          {item.name}
+                        </span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-2 sm:h-4 overflow-hidden">
                         <div
@@ -262,7 +284,8 @@ export function CaseStudy() {
                 <li className="flex items-start gap-2 sm:gap-3">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
                   <span className="font-thin text-foreground text-xs sm:text-base">
-                    Allow clients to explore multiple options quickly, reducing uncertainty and revisions
+                    Allow clients to explore multiple options quickly, reducing
+                    uncertainty and revisions
                   </span>
                 </li>
               </ul>
@@ -283,5 +306,5 @@ export function CaseStudy() {
         />
       )}
     </>
-  )
+  );
 }
