@@ -102,7 +102,7 @@ export function CaseStudy() {
             <div className="space-y-4 sm:space-y-6">
               <p className="text-pretty sm:text-base text-foreground mx-2 px-0 mt-0 text-xs ml-0 pr-1.5 pl-0 mb-0.5 pb-0 font-light">
                 Clients often hesitate to approve extensions because they can't
-                visualize the final result on their own home. This uncertainty
+                visualise the final result on their own home. This uncertainty
                 slows decisions, limits project scope, and reduces conversion
                 potential.
               </p>
