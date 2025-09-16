@@ -136,28 +136,6 @@ export function CaseStudy() {
                       </span>
                     </div>
                   </div>
-                  <div
-                    className="relative cursor-pointer group"
-                    onClick={() =>
-                      openComparison(
-                        "/images/case-study/before-landscape.jpg",
-                        "/images/case-study/after-interior-to-landscape.jpg",
-                        "House before extension - landscape view",
-                        "House with extension - interior to landscape view"
-                      )
-                    }
-                  >
-                    <img
-                      src="/images/case-study/before-landscape.jpg"
-                      alt="House before extension - landscape view"
-                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
-                        Click to compare
-                      </span>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="space-y-2">
@@ -179,28 +157,6 @@ export function CaseStudy() {
                     <img
                       src="/images/case-study/after-main.jpg"
                       alt="House with AI-generated extension - main view"
-                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
-                        Click to compare
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    className="relative cursor-pointer group"
-                    onClick={() =>
-                      openComparison(
-                        "/images/case-study/before-landscape.jpg",
-                        "/images/case-study/after-interior-to-landscape.jpg",
-                        "House before extension - landscape view",
-                        "House with extension - interior to landscape view"
-                      )
-                    }
-                  >
-                    <img
-                      src="/images/case-study/after-interior-to-landscape.jpg"
-                      alt="House with extension - interior to landscape view"
                       className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
