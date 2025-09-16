@@ -114,20 +114,67 @@ export function CaseStudy() {
                   Before
                 </span>
                 <div className="grid grid-cols-1 gap-2">
+                  {/* Row 1 */}
                   <div
                     className="relative cursor-pointer group"
                     onClick={() =>
                       openComparison(
-                        "/images/case-study/before.jpg",
-                        "/images/case-study/after-main.jpg",
-                        "House before extension - main view",
-                        "House with AI-generated extension - main view"
+                        "/images/case-study/row1-before.png",
+                        "/images/case-study/row1-after.png",
+                        "House before extension - view 1",
+                        "House with AI-generated extension - view 1"
                       )
                     }
                   >
                     <img
-                      src="/images/case-study/before.jpg"
-                      alt="House before extension - main view"
+                      src="/images/case-study/row1-before.png"
+                      alt="House before extension - view 1"
+                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        Click to compare
+                      </span>
+                    </div>
+                  </div>
+                  {/* Row 2 */}
+                  <div
+                    className="relative cursor-pointer group"
+                    onClick={() =>
+                      openComparison(
+                        "/images/case-study/row2-before.jpg",
+                        "/images/case-study/row2-after.jpg",
+                        "House before extension - view 2",
+                        "House with AI-generated extension - view 2"
+                      )
+                    }
+                  >
+                    <img
+                      src="/images/case-study/row2-before.jpg"
+                      alt="House before extension - view 2"
+                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        Click to compare
+                      </span>
+                    </div>
+                  </div>
+                  {/* Row 3 */}
+                  <div
+                    className="relative cursor-pointer group"
+                    onClick={() =>
+                      openComparison(
+                        "/images/case-study/row3-before.jpg",
+                        "/images/case-study/row3-after.jpg",
+                        "House before extension - view 3",
+                        "House with AI-generated extension - view 3"
+                      )
+                    }
+                  >
+                    <img
+                      src="/images/case-study/row3-before.jpg"
+                      alt="House before extension - view 3"
                       className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
@@ -143,20 +190,67 @@ export function CaseStudy() {
                   After
                 </span>
                 <div className="grid grid-cols-1 gap-2">
+                  {/* Row 1 */}
                   <div
                     className="relative cursor-pointer group"
                     onClick={() =>
                       openComparison(
-                        "/images/case-study/before.jpg",
-                        "/images/case-study/after-main.jpg",
-                        "House before extension - main view",
-                        "House with AI-generated extension - main view"
+                        "/images/case-study/row1-before.png",
+                        "/images/case-study/row1-after.png",
+                        "House before extension - view 1",
+                        "House with AI-generated extension - view 1"
                       )
                     }
                   >
                     <img
-                      src="/images/case-study/after-main.jpg"
-                      alt="House with AI-generated extension - main view"
+                      src="/images/case-study/row1-after.png"
+                      alt="House with AI-generated extension - view 1"
+                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        Click to compare
+                      </span>
+                    </div>
+                  </div>
+                  {/* Row 2 */}
+                  <div
+                    className="relative cursor-pointer group"
+                    onClick={() =>
+                      openComparison(
+                        "/images/case-study/row2-before.jpg",
+                        "/images/case-study/row2-after.jpg",
+                        "House before extension - view 2",
+                        "House with AI-generated extension - view 2"
+                      )
+                    }
+                  >
+                    <img
+                      src="/images/case-study/row2-after.jpg"
+                      alt="House with AI-generated extension - view 2"
+                      className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                        Click to compare
+                      </span>
+                    </div>
+                  </div>
+                  {/* Row 3 */}
+                  <div
+                    className="relative cursor-pointer group"
+                    onClick={() =>
+                      openComparison(
+                        "/images/case-study/row3-before.jpg",
+                        "/images/case-study/row3-after.jpg",
+                        "House before extension - view 3",
+                        "House with AI-generated extension - view 3"
+                      )
+                    }
+                  >
+                    <img
+                      src="/images/case-study/row3-after.jpg"
+                      alt="House with AI-generated extension - view 3"
                       className="w-full h-32 sm:h-36 lg:h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-lg flex items-center justify-center">
